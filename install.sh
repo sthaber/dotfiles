@@ -1,6 +1,6 @@
 #!/bin/bash
 
-find $(pwd) -maxdepth -type f ! -name install.sh -exec ln -sf {} ~/ \;
+find $(pwd) -type f ! -name install.sh -exec ln -sf {} ~/ \;
 
 crontab ~/.crontab
 
