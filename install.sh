@@ -1,7 +1,7 @@
 #!/bin/bash
 set -ex
 
-find $(pwd) -type f ! -name install.sh -exec ln -sf {} ~/ \;
+find $(pwd) -type d -name ".git" -prune -o -type f ! -name install.sh -exec ln -sf {} ~/ \;
 
 crontab ~/.crontab
 
