@@ -3,6 +3,9 @@
 
 export EDITOR="emacs"
 
+HISTSIZE=1000000
+HISTFILESIZE=1000000
+
 # Set path and clean up duplicate path entries.
 eval $(cat /etc/environment)
 PATH=/opt/qumulo/toolchain/bin:$PATH:~/.local/bin:~/tools:~/src/tools
