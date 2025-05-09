@@ -68,12 +68,8 @@
     "python.defaultInterpreterPath": "/opt/qumulo/toolchain/bin/qpython",
     // XXX Steven: You used to be able to put a symlink from ~/qinternal to ~/src and then
     // autocomplete would work, but it doesn't seem to be working for me.
-    "python.autoComplete.extraPaths": [
-        "~"
-    ],
-    "python.analysis.extraPaths": [
-        "~"
-    ],
+    "python.autoComplete.extraPaths": ["~"],
+    "python.analysis.extraPaths": ["~"],
 
     "git.enabled": false,
 }
