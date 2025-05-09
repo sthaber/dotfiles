@@ -22,7 +22,7 @@
 # 
 # m h  dom mon dow   command
 
-*/1 * * * * /home/steven/backup_patches.sh
+*/1 * * * * /home/steven/.backup_patches.sh
 0 4 * * * /opt/qumulo/toolchain/bin/qrun /home/steven/src/qonstruct/cache_tool.py trim /home/steven/.cache/qumulo_build/ --entry-mtime 4days
 0 4 * * * /opt/qumulo/toolchain/bin/qrun qpkg sweep
-0 4 * * * /home/steven/prune_patches_backup.sh
+0 4 * * * /home/steven/.prune_patches_backup.sh
