@@ -1,0 +1,79 @@
+{
+    "editor.rulers": [
+        100
+    ],
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+    "files.eol": "\n",
+
+    "files.associations": {
+        // XXX Steven: add Qumulo extension support for the x format for syntax highlighting.
+        "*.x": "x",
+        "*.h": "c",
+        "*.c": "c",
+    },
+
+    "files.exclude": {
+        ".mypy_cache": true,
+        ".qpkg": true,
+        ".ruff_cache": true,
+        "**/*.css": true,
+        "**/*.js": true,
+        "**/*.jsx": true,
+        "**/*.ts": true,
+        "**/*.tsx": true,
+        "**/*.orig": true,
+        "**/*.rej": true,
+        "**/*~": true,
+        "**/*code_labs*": true,
+        "cscope.out": true,
+        "rust-project.json": true,
+        "tags": true,
+        "TAGS": true,
+        "build": true,
+    },
+
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+
+    "clang-format.executable": "/opt/qumulo/toolchain/bin/clang-format",
+    "clang-format.language.c.style": "file",
+
+    "[c]": {
+        "editor.defaultFormatter": "xaver.clang-format",
+        "editor.formatOnSave": true,
+    },
+
+    "rust-analyzer.server.path": "/opt/qumulo/toolchain/bin/rust-analyzer",
+    "rust-analyzer.rustfmt.overrideCommand": [
+        "/opt/qumulo/toolchain/bin/rustfmt"
+    ],
+    "rust-analyzer.showRequestFailedErrorNotification": false,
+
+    "[rust]": {
+        "editor.formatOnSave": true,
+        "editor.codeLens": false,
+    },
+
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit",
+            "source.organizeImports.ruff": "explicit"
+        },
+    },
+
+    "python.defaultInterpreterPath": "/opt/qumulo/toolchain/bin/qpython",
+    // XXX Steven: You used to be able to put a symlink from ~/qinternal to ~/src and then
+    // autocomplete would work, but it doesn't seem to be working for me.
+    "python.autoComplete.extraPaths": [
+        "~"
+    ],
+    "python.analysis.extraPaths": [
+        "~"
+    ],
+
+    "git.enabled": false,
+}
