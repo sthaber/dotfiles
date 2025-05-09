@@ -1,7 +1,7 @@
 ;(load-theme 'tsdh-dark t)
 
 ;(load-file "/usr/share/emacs/site-lisp/xcscope/xcscope.el")
-;(load-file "~/src/tools/editors/emacs/etags-select.el")
+(load-file "~/src/tools/editors/emacs/etags-select.el")
 ;(load-file "~/src/tools/editors/emacs/style.el")
 
 ;(require 'xcscope)

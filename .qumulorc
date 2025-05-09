@@ -1,7 +1,6 @@
 {
     "build_progress": "colored",
     "build_default_options": {
-        "nfs_cache": "true",
         "linking_cache": "rw",
         "linking_cache_directory": "/home/steven/.cache/qumulo_build/"
     }

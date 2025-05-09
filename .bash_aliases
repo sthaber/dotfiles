@@ -3,11 +3,9 @@
 
 export EDITOR="emacs"
 
-HISTSIZE=1000000
-HISTFILESIZE=1000000
+export HISTSIZE=1000000
+export HISTFILESIZE=1000000
 
-# Set path and clean up duplicate path entries.
-eval $(cat /etc/environment)
 PATH=/opt/qumulo/toolchain/bin:$PATH:~/.local/bin:~/tools:~/src/tools
 
 # Terminal prompt.
@@ -15,33 +13,41 @@ txtblu='\e[1;34m' # Blue
 txtrst='\e[0m'    # Text Reset
 export PS1="\[$txtblu\][coder \t]\[$txtrst\]\$ "
 
-alias qedit='emacs ~/src/.hg/patches/series'
+# Build
+alias bloop='build --loop'
+alias blood='build --loop-until-done'
 alias cr='./check_run.py -bc'
 alias crr='./check_run.py'
-alias crfw='cr -Q --quark-broker quark-broker-cfw'
 alias rgt='./tools/red_green.py'
-alias rmjunk='find /home/steven/src/ -name "*.rej" -o -name "*.orig" -o -name "*~" | xargs rm'
+alias lac='lint/all -ac'
+alias lc='lint/all -c'
+alias la='lint/all -a'
+
+# Patch management
+alias np='next-patch --qnew'
+alias pp='next-patch --prev --qnew'
+alias qedit='emacs ~/src/.hg/patches/series'
 alias gh='hg'
-alias enzo="source $HOME/src/tools/qston/enzo/enzo.bash"
 alias mqdiff='hg diff -r qparent:qtip'
 alias mqstat='hg diff --stat -r qparent:qtip'
-alias reimage='~/src/check/systest/hw_reimage.py'
-alias simkill='tools/kill_stale_simnodes.sh'
-alias pyc='lint/pycheck -ca'
-alias lac='lint/all -ca'
+
+# Copy from official build
+alias cptags='cp -f /mnt/gravytrain/build/latest/src/{tags,TAGS} ~/src'
+alias cpra='cp -f /mnt/gravytrain/build/latest/src/rust-project.json ~/src && pkill rust-analyzer'
+
+# Directory shortcuts
 alias src='cd ~/src'
 alias latest='cd ~/src/build/tmp/latest'
 alias failed='cd ~/src/build/tmp/latest/FAILED'
 alias debug='less ~/src/build/tmp/latest/**/debug.log'
 alias output='less ~/src/build/tmp/latest/**/test_output'
-alias cptags='cp -f /mnt/gravytrain/build/latest/src/{tags,TAGS} ~/src'
-alias np='next-patch'
-alias sshi='chmod 0600 ~/src/infrastructure/id_rsa; ssh -i ~/src/infrastructure/id_rsa'
-alias scpi='chmod 0600 ~/src/infrastructure/id_rsa; scp -i ~/src/infrastructure/id_rsa'
-alias bp='~/backup_patches.sh'
+
+# Misc.
+alias enzo="source $HOME/src/tools/qston/enzo/enzo.bash"
+alias rmjunk='find /home/steven/src/ -name "*.rej" -o -name "*.orig" -o -name "*~" | xargs rm'
+alias simkill='tools/kill_stale_simnodes.sh'
+alias tn='~/src/triage/triageninja'
 
 # Qontent
-PATH=$PATH:~/.rbenv/bin
-eval "$(rbenv init -)"
 export GITHUB_TOKEN=$(cat /etc/coder/ghtoken)
 export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
