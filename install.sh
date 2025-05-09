@@ -8,7 +8,4 @@ ln -s "$CWD"/.ssh/config ~/.ssh/
 
 crontab ~/.crontab
 
-sudo apt -y install \
-     emacs \
-     rbenv \
-     zile
+sudo apt -y install emacs zile
