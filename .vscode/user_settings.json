@@ -48,6 +48,13 @@
     "terminal.integrated.sendKeybindingsToShell": true,
     "terminal.integrated.macOptionIsMeta": true,
 
+    // Terminal AI integration
+    "terminal.integrated.shellIntegration.enabled": false,
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "terminal.integrated.automationProfile.linux": {
+        "path": "/bin/bash"
+    },
+
     // Misc
     "extensions.ignoreRecommendations": true,
     "emacs-mcx.useMetaPrefixMacCmd": true,
@@ -60,6 +67,7 @@
         "markdown",
         "scminput"
     ],
+    "cursor.chat.terminalShowHoverHint": false,
 
     // Automatic below here
     "workbench.colorTheme": "Default Dark Modern",
