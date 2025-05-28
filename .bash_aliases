@@ -9,9 +9,11 @@ export HISTFILESIZE=1000000
 PATH=/opt/qumulo/toolchain/bin:$PATH:~/.local/bin:~/tools:~/src/tools
 
 # Terminal prompt.
-txtblu='\e[1;34m' # Blue
-txtrst='\e[0m'    # Text Reset
-export PS1="\[$txtblu\][coder \t]\[$txtrst\]\$ "
+if [ "$TERM_PROGRAM" != "vscode" ]; then
+    txtblu='\e[1;34m' # Blue
+    txtrst='\e[0m'    # Text Reset
+    export PS1="\[$txtblu\][coder \t]\[$txtrst\]\$ "
+fi
 
 # Build
 alias bloop='build --loop'
