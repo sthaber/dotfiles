@@ -6,7 +6,7 @@ export EDITOR="emacs"
 export HISTSIZE=1000000
 export HISTFILESIZE=1000000
 
-PATH=/opt/qumulo/toolchain/bin:$PATH:~/.local/bin:~/tools:~/src/tools
+export PATH=/opt/qumulo/toolchain/bin:$PATH:~/.local/bin:~/tools:~/src/tools
 
 # Terminal prompt.
 if [ "$TERM_PROGRAM" != "vscode" ]; then
