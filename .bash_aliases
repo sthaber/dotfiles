@@ -44,6 +44,9 @@ alias failed='cd ~/src/build/tmp/latest/FAILED'
 alias debug='less ~/src/build/tmp/latest/**/debug.log'
 alias output='less ~/src/build/tmp/latest/**/test_output'
 
+# Toolchain
+alias notoolchain='export PATH=$(echo $PATH | sed "s|/opt/qumulo[^:]*:||g")'
+
 # Misc.
 alias enzo="source $HOME/src/tools/qston/enzo/enzo.bash"
 alias rmjunk='find /home/steven/src/ -name "*.rej" -o -name "*.orig" -o -name "*~" | xargs rm'
