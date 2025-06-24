@@ -6,12 +6,14 @@ export EDITOR="emacs"
 export HISTSIZE=1000000
 export HISTFILESIZE=1000000
 
-PATH=/opt/qumulo/toolchain/bin:$PATH:~/.local/bin:~/tools:~/src/tools
+export PATH=/opt/qumulo/toolchain/bin:$PATH:~/.local/bin:~/tools:~/src/tools
 
 # Terminal prompt.
-txtblu='\e[1;34m' # Blue
-txtrst='\e[0m'    # Text Reset
-export PS1="\[$txtblu\][coder \t]\[$txtrst\]\$ "
+if [ "$TERM_PROGRAM" != "vscode" ]; then
+    txtblu='\e[1;34m' # Blue
+    txtrst='\e[0m'    # Text Reset
+    export PS1="\[$txtblu\][coder \t]\[$txtrst\]\$ "
+fi
 
 # Build
 alias bloop='build --loop'
@@ -42,11 +44,15 @@ alias failed='cd ~/src/build/tmp/latest/FAILED'
 alias debug='less ~/src/build/tmp/latest/**/debug.log'
 alias output='less ~/src/build/tmp/latest/**/test_output'
 
+# Toolchain
+alias notoolchain='export PATH=$(echo $PATH | sed "s|/opt/qumulo[^:]*:||g")'
+
 # Misc.
 alias enzo="source $HOME/src/tools/qston/enzo/enzo.bash"
 alias rmjunk='find /home/steven/src/ -name "*.rej" -o -name "*.orig" -o -name "*~" | xargs rm'
 alias simkill='tools/kill_stale_simnodes.sh'
 alias tn='~/src/triage/triageninja'
+alias claude='~/.claude/local/claude'
 
 # Qontent
 export GITHUB_TOKEN=$(cat /etc/coder/ghtoken)
