@@ -9,10 +9,13 @@ export HISTFILESIZE=1000000
 export PATH=/opt/qumulo/toolchain/bin:$PATH:~/.local/bin:~/tools:~/src/tools
 
 # Terminal prompt.
-if [ "$TERM_PROGRAM" != "vscode" ]; then
-    txtblu='\e[1;34m' # Blue
-    txtrst='\e[0m'    # Text Reset
-    export PS1="\[$txtblu\][coder \t]\[$txtrst\]\$ "
+txtblu='\e[1;34m' # Blue
+txtrst='\e[0m'    # Text Reset
+export PS1="\[$txtblu\][coder \t]\[$txtrst\]\$ "
+
+# Manually force AI terminals to load the VSCode shell integration goop.
+if [[ "$TERM_PROGRAM" == "vscode" ]]; then
+    . "$(cursor --locate-shell-integration-path bash)"
 fi
 
 # Build
