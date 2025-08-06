@@ -7,16 +7,15 @@
     "files.eol": "\n",
 
     "files.associations": {
-        // XXX Steven: add Qumulo extension support for the x format for syntax highlighting.
-        "*.x": "x",
+        "*.x": "qumulo-x",
         "*.h": "c",
         "*.c": "c",
     },
 
     "files.exclude": {
-        ".mypy_cache": true,
-        ".qpkg": true,
-        ".ruff_cache": true,
+        ".mypy_cache/": true,
+        ".qpkg/": true,
+        ".ruff_cache/": true,
         "**/*.css": true,
         "**/*.js": true,
         "**/*.jsx": true,
@@ -30,15 +29,44 @@
         "rust-project.json": true,
         "tags": true,
         "TAGS": true,
-        "build": true,
+        "build/**/.dependencies_headers": true,
+        "build/**/*.bc": true,
+        "build/**/*.ctags": true,
+        "build/**/*.d": true,
+        "build/**/*.etags": true,
+        "build/**/*.export": true,
+        "build/**/*.gen_deps": true,
+        "build/**/*.i": true,
+        "build/**/*.import": true,
+        "build/**/*.ld": true,
+        "build/**/*.list": true,
+        "build/**/*.map": true,
+        "build/**/*.matches": true,
+        "build/**/*.pch": true,
+        "build/**/*.proof": true,
+        "build/**/*.rmeta": true,
+        "build/**/*.run": true,
+        "build/**/*.signature": true,
+        "build/**/*.signatures": true,
+        "build/**/*.so": true,
+        "build/**/*.symbols": true,
+        "build/**/*.types": true,
+        "build/**/*closure": true,
+        "build/**/*test_c": true,
+        "build/.qonstruct/": true,
+        "build/images/": true,
+        "build/lint/": true,
+        "build/py.deps/": true,
+        "build/tmp/": true,
+        "build/toolchain/src/": true,
+        "build/toolchain/toolchain_chroot/": true,
     },
 
     "files.watcherExclude": {
-        "build": true,
-        ".mypy_cache": true,
-        ".qpkg": true,
-        ".ruff_cache": true,
+        "build/": true,
     },
+
+    "search.useIgnoreFiles": false,
 
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
@@ -48,8 +76,8 @@
     "clang-format.language.c.style": "file",
 
     "[c]": {
-        "editor.defaultFormatter": "xaver.clang-format",
         "editor.formatOnSave": true,
+        "editor.defaultFormatter": "xaver.clang-format",
     },
 
     "rust-analyzer.server.path": "/opt/qumulo/toolchain/bin/rust-analyzer",
@@ -68,7 +96,7 @@
         "editor.defaultFormatter": "charliermarsh.ruff",
         "editor.codeActionsOnSave": {
             "source.fixAll": "explicit",
-            "source.organizeImports.ruff": "explicit"
+            "source.organizeImports.ruff": "explicit",
         },
     },
 
@@ -76,7 +104,6 @@
     // XXX Steven: You used to be able to put a symlink from ~/qinternal to ~/src and then
     // autocomplete would work, but it doesn't seem to be working for me.
     "python.autoComplete.extraPaths": ["~"],
-    "python.analysis.extraPaths": ["~"],
 
     "git.enabled": false,
 }

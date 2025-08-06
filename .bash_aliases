@@ -55,7 +55,6 @@ alias enzo="source $HOME/src/tools/qston/enzo/enzo.bash"
 alias rmjunk='find /home/steven/src/ -name "*.rej" -o -name "*.orig" -o -name "*~" | xargs rm'
 alias simkill='tools/kill_stale_simnodes.sh'
 alias tn='~/src/triage/triageninja'
-alias claude='~/.claude/local/claude'
 
 # Qontent
 export GITHUB_TOKEN=$(cat /etc/coder/ghtoken)
