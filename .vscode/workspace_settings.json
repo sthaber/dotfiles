@@ -16,11 +16,6 @@
         ".mypy_cache/": true,
         ".qpkg/": true,
         ".ruff_cache/": true,
-        "**/*.css": true,
-        "**/*.js": true,
-        "**/*.jsx": true,
-        "**/*.ts": true,
-        "**/*.tsx": true,
         "**/*.orig": true,
         "**/*.rej": true,
         "**/*~": true,
@@ -76,7 +71,7 @@
     "clang-format.language.c.style": "file",
 
     "[c]": {
-        "editor.formatOnSave": true,
+        "editor.formatOnSave": false,
         "editor.defaultFormatter": "xaver.clang-format",
     },
 
@@ -87,12 +82,12 @@
     "rust-analyzer.showRequestFailedErrorNotification": false,
 
     "[rust]": {
-        "editor.formatOnSave": true,
+        "editor.formatOnSave": false,
         "editor.codeLens": false,
     },
 
     "[python]": {
-        "editor.formatOnSave": true,
+        "editor.formatOnSave": false,
         "editor.defaultFormatter": "charliermarsh.ruff",
         "editor.codeActionsOnSave": {
             "source.fixAll": "explicit",

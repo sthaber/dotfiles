@@ -52,7 +52,7 @@ alias notoolchain='export PATH=$(echo $PATH | sed "s|/opt/qumulo[^:]*:||g")'
 
 # Misc.
 alias enzo="source $HOME/src/tools/qston/enzo/enzo.bash"
-alias rmjunk='find /home/steven/src/ -name "*.rej" -o -name "*.orig" -o -name "*~" | xargs rm'
+alias rmjunk='find /home/steven/src/ -path "/home/steven/src/build/*" -prune -o \( -type f \( -name "*.rej" -o -name "*.orig" -o -name "*~" \) -print0 \) | xargs -r -0 rm -f'
 alias simkill='tools/kill_stale_simnodes.sh'
 alias tn='~/src/triage/triageninja'
 

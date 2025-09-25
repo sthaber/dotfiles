@@ -37,6 +37,9 @@
 (add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 (package-initialize)
 
+;Associate .mdc files with markdown mode
+(add-to-list 'auto-mode-alist '("\\.mdc\\'" . markdown-mode))
+
 ;Make helm always default to src
 (defun my_helm ()
   (interactive)
