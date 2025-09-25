@@ -1,0 +1,190 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "ctrl+t ctrl+b",
+        "command": "extension.ctagsJumpBack",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+t",
+        "command": "-extension.ctagsJumpBack",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+t ctrl+t",
+        "command": "extension.findCTags",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+t",
+        "command": "-extension.findCTags",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+t ctrl+y",
+        "command": "extension.findCTagsPrompt",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+alt+t",
+        "command": "-extension.findCTagsPrompt",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+alt+]",
+        "command": "workbench.action.nextEditorInGroup"
+    },
+    {
+        "key": "ctrl+k ctrl+pagedown",
+        "command": "-workbench.action.nextEditorInGroup"
+    },
+    {
+        "key": "shift+alt+[",
+        "command": "workbench.action.previousEditorInGroup"
+    },
+    {
+        "key": "ctrl+k ctrl+pageup",
+        "command": "-workbench.action.previousEditorInGroup"
+    },
+    {
+        "key": "ctrl+shift+r",
+        "command": "workbench.action.showAllSymbols"
+    },
+    {
+        "key": "ctrl+t",
+        "command": "-workbench.action.showAllSymbols"
+    },
+    {
+        "key": "ctrl+x ctrl+t",
+        "command": "workbench.action.files.newUntitledFile"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "-workbench.action.files.newUntitledFile"
+    },
+    {
+        "key": "ctrl+shift+n",
+        "command": "editor.action.insertCursorBelow",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+alt+down",
+        "command": "-editor.action.insertCursorBelow",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+alt+up",
+        "command": "-editor.action.insertCursorAbove",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+x ctrl+c",
+        "command": "-workbench.action.closeWindow"
+    },
+    {
+        "key": "f4",
+        "command": "-togglehs.toggleHS"
+    },
+    {
+        "key": "ctrl+x ctrl+o",
+        "command": "workbench.action.files.openFile",
+        "when": "true"
+    },
+    {
+        "key": "ctrl+o",
+        "command": "-workbench.action.files.openFile",
+        "when": "true"
+    },
+    {
+        "key": "ctrl+q",
+        "command": "editor.action.formatDocument",
+        "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+    },
+    {
+        "key": "shift+alt+f",
+        "command": "-editor.action.formatDocument",
+        "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+    },
+    {
+        "key": "ctrl+q",
+        "command": "editor.action.formatDocument.none",
+        "when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorReadonly"
+    },
+    {
+        "key": "shift+alt+f",
+        "command": "-editor.action.formatDocument.none",
+        "when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorReadonly"
+    },
+    {
+        "key": "ctrl+x ctrl+a",
+        "command": "composer.startComposerPrompt"
+    },
+    {
+        "key": "ctrl+i",
+        "command": "-composer.startComposerPrompt"
+    },
+    {
+        "key": "ctrl+shift+k",
+        "command": "-aipopup.action.modal.generate",
+        "when": "editorFocus && !composerBarIsVisible"
+    },
+    {
+        "key": "ctrl+x ctrl+i",
+        "command": "aipopup.action.modal.generate",
+        "when": "editorFocus && !composerBarIsVisible"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "-aipopup.action.modal.generate",
+        "when": "editorFocus && !composerBarIsVisible"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "-cursorai.action.generateInTerminal",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported || terminalHasBeenCreated && terminalPromptBarVisible || terminalProcessSupported && terminalPromptBarVisible"
+    },
+    {
+        "key": "ctrl+win+i",
+        "command": "cursorai.action.generateInTerminal"
+    },
+    {
+        "key": "ctrl+x ctrl+u",
+        "command": "aichat.newchataction"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "-aichat.newchataction"
+    },
+    {
+        "key": "ctrl+shift+f",
+        "command": "extension.searchUnderCursor"
+    },
+    {
+        "key": "ctrl+shift+g",
+        "command": "workbench.action.findInFiles"
+    },
+    {
+        "key": "ctrl+shift+f",
+        "command": "-workbench.action.findInFiles"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "workbench.action.quickOpenSelectNext",
+        "when": "inQuickOpen"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "-workbench.action.quickOpenSelectNext",
+        "when": "false"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "workbench.action.quickOpenSelectPrevious",
+        "when": "inQuickOpen"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "-workbench.action.quickOpenSelectPrevious",
+        "when": "false"
+    }
+]

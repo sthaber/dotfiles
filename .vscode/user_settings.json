@@ -33,6 +33,7 @@
     "editor.renderWhitespace": "none",
     "editor.stickyScroll.enabled": false,
     "workbench.editor.tabSizing": "shrink",
+    "workbench.editor.wrapTabs": true,
 
     // Color theme
     "workbench.colorCustomizations": {
@@ -49,7 +50,6 @@
     "terminal.integrated.macOptionIsMeta": true,
 
     // Terminal AI integration
-    "terminal.integrated.shellIntegration.enabled": true,
     "terminal.integrated.defaultProfile.linux": "bash",
     "terminal.integrated.automationProfile.linux": {
         "path": "/bin/bash"
@@ -59,15 +59,16 @@
     "extensions.ignoreRecommendations": true,
     "emacs-mcx.useMetaPrefixMacCmd": true,
     "diffEditor.ignoreTrimWhitespace": true,
-    "editor.minimap.enabled": false,
+    "editor.minimap.enabled": true,
 
     // Cursor AI
     "cursor.cpp.disabledLanguages": [
-        "plaintext",
-        "markdown",
         "scminput"
     ],
     "cursor.chat.terminalShowHoverHint": false,
+    "cursor.composer.usageSummaryDisplay": "always",
+    "cursor.composer.shouldChimeAfterChatFinishes": true,
+    "cursor.cpp.enablePartialAccepts": true,
 
     // Automatic below here
     "workbench.colorTheme": "Default Dark Modern",
