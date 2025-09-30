@@ -40,6 +40,9 @@
 ;Associate .mdc files with markdown mode
 (add-to-list 'auto-mode-alist '("\\.mdc\\'" . markdown-mode))
 
+;Associate .commit.hg.txt files with diff mode
+(add-to-list 'auto-mode-alist '("\\.commit\\.hg\\.txt\\'" . diff-mode))
+
 ;Make helm always default to src
 (defun my_helm ()
   (interactive)
