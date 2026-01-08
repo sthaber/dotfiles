@@ -38,7 +38,10 @@
     // Color theme
     "workbench.colorCustomizations": {
         "[Default Dark Modern]": {
-            "editor.background": "#000000"
+            "editor.background": "#000000",
+            "panel.background": "#000000",
+            "terminal.background": "#000000",
+            "sideBar.background": "#000000",
         }
     },
 
@@ -59,17 +62,28 @@
     "extensions.ignoreRecommendations": true,
     "emacs-mcx.useMetaPrefixMacCmd": true,
     "diffEditor.ignoreTrimWhitespace": true,
-    "editor.minimap.enabled": true,
 
-    // Cursor AI
+    // Cursor
     "cursor.cpp.disabledLanguages": [
         "scminput"
     ],
-    "cursor.chat.terminalShowHoverHint": false,
     "cursor.composer.usageSummaryDisplay": "always",
     "cursor.composer.shouldChimeAfterChatFinishes": true,
     "cursor.cpp.enablePartialAccepts": true,
+    "cursor.composer.shouldAutoAcceptDiffs": false,
 
-    // Automatic below here
+    // Old debugging cruft, kill if it doesn't matter:
+    // "explorer.autoReveal": false,
+    // "workbench.editor.revealIfOpen": false,
+    // "workbench.editor.focusRecentEditorAfterClose": false,
+    // "editor.accessibilitySupport": "off",
+
+    // Claude Code
+    "claudeCode.preferredLocation": "panel",
+    "claudeCode.selectedModel": "default",
+    "claudeCode.initialPermissionMode": "acceptEdits",
+
+    // Auto below here:
     "workbench.colorTheme": "Default Dark Modern",
+    "editor.accessibilitySupport": "off",
 }
