@@ -99,6 +99,7 @@
     // XXX Steven: You used to be able to put a symlink from ~/qinternal to ~/src and then
     // autocomplete would work, but it doesn't seem to be working for me.
     "python.autoComplete.extraPaths": ["~"],
+    "python.languageServer": "None",
 
     "git.enabled": false,
 }
