@@ -81,10 +81,6 @@
         "command": "-workbench.action.closeWindow"
     },
     {
-        "key": "f4",
-        "command": "-togglehs.toggleHS"
-    },
-    {
         "key": "ctrl+x ctrl+o",
         "command": "workbench.action.files.openFile",
         "when": "true"
@@ -143,10 +139,6 @@
         "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported || terminalHasBeenCreated && terminalPromptBarVisible || terminalProcessSupported && terminalPromptBarVisible"
     },
     {
-        "key": "ctrl+win+i",
-        "command": "cursorai.action.generateInTerminal"
-    },
-    {
         "key": "ctrl+x ctrl+u",
         "command": "aichat.newchataction"
     },
@@ -185,5 +177,49 @@
         "key": "ctrl+p",
         "command": "-workbench.action.quickOpenSelectPrevious",
         "when": "false"
+    },
+    {
+        "key": "ctrl+t ctrl+d",
+        "command": "editor.action.revealDefinition",
+        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
+    {
+        "key": "f12",
+        "command": "-editor.action.revealDefinition",
+        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
+    {
+        "key": "ctrl+t ctrl+r",
+        "command": "editor.action.goToReferences",
+        "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+    },
+    {
+        "key": "shift+f12",
+        "command": "-editor.action.goToReferences",
+        "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+    },
+    {
+        "key": "ctrl+t ctrl+i",
+        "command": "editor.action.goToImplementation",
+        "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
+    {
+        "key": "ctrl+f12",
+        "command": "-editor.action.goToImplementation",
+        "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
+    {
+        "key": "ctrl+t ctrl+s",
+        "command": "editor.action.revealDefinitionAside",
+        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
+    {
+        "key": "ctrl+k f12",
+        "command": "-editor.action.revealDefinitionAside",
+        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
+    {
+        "key": "ctrl+c ctrl+c",
+        "command": "claude-vscode.sidebar.open"
     }
 ]
