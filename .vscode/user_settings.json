@@ -72,12 +72,6 @@
     "cursor.cpp.enablePartialAccepts": true,
     "cursor.composer.shouldAutoAcceptDiffs": false,
 
-    // Old debugging cruft, kill if it doesn't matter:
-    // "explorer.autoReveal": false,
-    // "workbench.editor.revealIfOpen": false,
-    // "workbench.editor.focusRecentEditorAfterClose": false,
-    // "editor.accessibilitySupport": "off",
-
     // Claude Code
     "claudeCode.preferredLocation": "panel",
     "claudeCode.selectedModel": "default",
