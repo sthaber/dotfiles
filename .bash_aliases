@@ -21,8 +21,7 @@ fi
 # Build
 alias bloop='build --loop'
 alias blood='build --loop-until-done'
-alias cr='./check_run.py -bc'
-alias crr='./check_run.py'
+alias cr='check -bc'
 alias rgt='./tools/red_green.py'
 alias lac='lint/all -ac'
 alias lc='lint/all -c'
@@ -31,7 +30,7 @@ alias la='lint/all -a'
 # Patch management
 alias np='next-patch --qnew'
 alias pp='next-patch --prev --qnew'
-alias qedit='emacs ~/src/.hg/patches/series'
+alias qedit='emacs .hg/patches/series'
 alias gh='hg'
 alias mqdiff='hg diff -r qparent:qtip'
 alias mqstat='hg diff --stat -r qparent:qtip'
@@ -52,9 +51,10 @@ alias notoolchain='export PATH=$(echo $PATH | sed "s|/opt/qumulo[^:]*:||g")'
 
 # Misc.
 alias enzo="source $HOME/src/tools/qston/enzo/enzo.bash"
-alias rmjunk='find /home/steven/src/ -path "/home/steven/src/build/*" -prune -o \( -type f \( -name "*.rej" -o -name "*.orig" -o -name "*~" \) -print0 \) | xargs -r -0 rm -f'
+alias rmjunk='tools/rm_merge_remnants.sh'
 alias simkill='tools/kill_stale_simnodes.sh'
 alias tn='~/src/triage/triageninja'
+alias claude='claude --dangerously-skip-permissions'
 
 # Qontent
 export GITHUB_TOKEN=$(cat /etc/coder/ghtoken)
