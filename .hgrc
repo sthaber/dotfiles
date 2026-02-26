@@ -3,7 +3,8 @@ username = Steven Haber <steven@qumulo.com>
 # ignore = ~/.hgignore
 
 [pager]
-pager = less -FRX
+#pager = less -FRX
+pager = /snap/bin/git-delta-snap.delta --no-gitconfig --pager='less -FRX' --light
 quiet = True
 
 [extensions]
