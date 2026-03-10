@@ -3,5 +3,9 @@
   "hooks": {},
   "enabledPlugins": {},
   "alwaysThinkingEnabled": true,
-  "skipDangerousModePermissionPrompt": true
+  "skipDangerousModePermissionPrompt": true,
+  "statusLine": {
+    "type": "command",
+    "command": "bash /home/steven/.claude/statusline-command.sh"
+  }
 }
