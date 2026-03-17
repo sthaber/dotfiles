@@ -1,11 +1,13 @@
 {
   "permissions": {},
   "hooks": {},
-  "enabledPlugins": {},
-  "alwaysThinkingEnabled": true,
-  "skipDangerousModePermissionPrompt": true,
   "statusLine": {
     "type": "command",
     "command": "bash /home/steven/.claude/statusline-command.sh"
-  }
+  },
+  "enabledPlugins": {},
+  "alwaysThinkingEnabled": true,
+  "skipDangerousModePermissionPrompt": true,
+  "voiceEnabled": true,
+  "autoMemoryDirectory": "~/.claude/shared-memory"
 }

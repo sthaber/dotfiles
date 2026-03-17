@@ -9,6 +9,8 @@ ln -sf "$CWD"/.ssh/config ~/.ssh/
 mkdir -p ~/.claude
 ln -sf "$CWD"/.claude/keybindings.json ~/.claude/
 ln -sf "$CWD"/.claude/settings.json ~/.claude/
+ln -sf "$CWD"/.claude/statusline-command.sh ~/.claude/
+ln -sf "$CWD"/.claude/CLAUDE.md ~/.claude/
 
 crontab ~/.crontab
 

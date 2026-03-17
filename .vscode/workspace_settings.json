@@ -20,6 +20,7 @@
         "**/*.rej": true,
         "**/*~": true,
         "**/*code_labs*": true,
+        "ai/scratch/": true,
         "cscope.out": true,
         "rust-project.json": true,
         "tags": true,
