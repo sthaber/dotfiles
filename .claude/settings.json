@@ -1,5 +1,8 @@
 {
-  "permissions": {},
+  "skipAutoPermissionPrompt": true,
+  "permissions": {
+    "defaultMode": "auto"
+  },
   "hooks": {},
   "statusLine": {
     "type": "command",

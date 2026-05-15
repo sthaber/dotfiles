@@ -50,12 +50,12 @@ alias output='less ~/src/build/tmp/latest/**/test_output'
 alias notoolchain='export PATH=$(echo $PATH | sed "s|/opt/qumulo[^:]*:||g")'
 
 # Misc.
-alias enzo="source $HOME/src/tools/qston/enzo/enzo.bash"
+alias enzo='source $HOME/src/tools/qston/enzo/enzo.bash'
 alias rmjunk='tools/rm_merge_remnants.sh'
 alias simkill='tools/kill_stale_simnodes.sh'
 alias tn='~/src/triage/triageninja'
-alias claude='claude --dangerously-skip-permissions'
+alias emacs='emacs -nw'
 
 # Qontent
-export GITHUB_TOKEN=$(cat /etc/coder/ghtoken)
-export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
+# export GITHUB_TOKEN=$(cat /etc/coder/ghtoken)
+# export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
