@@ -1,8 +1,10 @@
 ;(load-theme 'tsdh-dark t)
 
 ;(load-file "/usr/share/emacs/site-lisp/xcscope/xcscope.el")
-(load-file "~/src/tools/editors/emacs/etags-select.el")
-;(load-file "~/src/tools/editors/emacs/style.el")
+(dolist (f '("~/src/tools/editors/emacs/etags-select.el"
+             "~/src/tools/editors/emacs/style.el"))
+  (when (file-exists-p f)
+    (load-file f)))
 
 ;(require 'xcscope)
 
@@ -70,4 +72,5 @@
  )
 
 (setq linum-format "%d ")
-(global-linum-mode)
+(cond ((fboundp 'global-linum-mode) (global-linum-mode))
+      ((fboundp 'global-display-line-numbers-mode) (global-display-line-numbers-mode)))
