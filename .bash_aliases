@@ -31,7 +31,6 @@ alias la='lint/all -a'
 alias np='next-patch --qnew'
 alias pp='next-patch --prev --qnew'
 alias qedit='emacs .hg/patches/series'
-alias gh='hg'
 alias mqdiff='hg diff -r qparent:qtip'
 alias mqstat='hg diff --stat -r qparent:qtip'
 
