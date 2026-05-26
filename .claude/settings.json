@@ -1,5 +1,4 @@
 {
-  "skipAutoPermissionPrompt": true,
   "permissions": {
     "defaultMode": "auto"
   },
@@ -10,7 +9,10 @@
   },
   "enabledPlugins": {},
   "alwaysThinkingEnabled": true,
+  "autoMemoryDirectory": "~/.claude/shared-memory",
   "skipDangerousModePermissionPrompt": true,
+  "agentPushNotifEnabled": true,
+  "skipAutoPermissionPrompt": true,
   "voiceEnabled": true,
-  "autoMemoryDirectory": "~/.claude/shared-memory"
+  "remoteControlAtStartup": true
 }
