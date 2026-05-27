@@ -11,8 +11,9 @@
   "alwaysThinkingEnabled": true,
   "autoMemoryDirectory": "~/.claude/shared-memory",
   "skipDangerousModePermissionPrompt": true,
+  "remoteControlAtStartup": true,
   "agentPushNotifEnabled": true,
   "skipAutoPermissionPrompt": true,
   "voiceEnabled": true,
-  "remoteControlAtStartup": true
+  "tui": "default"
 }
