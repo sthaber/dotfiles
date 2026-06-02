@@ -1,5 +1,9 @@
 #!/bin/bash
-[ -d ~/src/.hg/patches ] || exit 0
 timestamp=$(date +"%Y%m%d_%H%M%S")
-mkdir -p ~/patches_backup/$timestamp
-cp -r ~/src/.hg/patches/* ~/patches_backup/$timestamp/
+for src in ~/src ~/src[0-9]*; do
+    [ -d "$src/.hg/patches" ] || continue
+    name=$(basename "$src")
+    dest=~/patches_backup/$name/$timestamp
+    mkdir -p "$dest"
+    cp -r "$src"/.hg/patches/* "$dest"/
+done

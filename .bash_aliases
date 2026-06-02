@@ -58,3 +58,6 @@ alias emacs='emacs -nw'
 # Qontent
 # export GITHUB_TOKEN=$(cat /etc/coder/ghtoken)
 # export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
+
+# k8s
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
