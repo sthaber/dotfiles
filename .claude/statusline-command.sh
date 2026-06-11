@@ -5,6 +5,7 @@ used=$(echo "$input" | jq -r '.context_window.used_percentage // empty')
 five_h=$(echo "$input" | jq -r '.rate_limits.five_hour.used_percentage // empty')
 week=$(echo "$input" | jq -r '.rate_limits.seven_day.used_percentage // empty')
 version=$(echo "$input" | jq -r '.version // empty')
+model=$(echo "$input" | jq -r '.model.display_name // empty')
 
 version_str=""
 if [ -n "$version" ]; then
@@ -12,6 +13,9 @@ if [ -n "$version" ]; then
 fi
 
 bits=""
+if [ -n "$model" ]; then
+    bits="${bits} [${model}]"
+fi
 if [ -n "$used" ]; then
     bits="${bits} [ctx: ${used}%]"
 fi

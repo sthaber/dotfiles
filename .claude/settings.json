@@ -9,11 +9,13 @@
   },
   "enabledPlugins": {},
   "alwaysThinkingEnabled": true,
+  "tui": "default",
   "autoMemoryDirectory": "~/.claude/shared-memory",
   "skipDangerousModePermissionPrompt": true,
   "remoteControlAtStartup": true,
+  "inputNeededNotifEnabled": true,
   "agentPushNotifEnabled": true,
   "skipAutoPermissionPrompt": true,
   "voiceEnabled": true,
-  "tui": "default"
+  "model": "claude-fable-5[1m]"
 }
