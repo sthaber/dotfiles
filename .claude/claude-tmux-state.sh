@@ -2,7 +2,7 @@
 # Reflect Claude Code session state into the tmux window-status flag.
 #
 # Called by Claude Code hooks (see ~/.claude/settings.json) with one argument:
-#   waiting  blocked on you           (Notification hook)
+#   waiting  blocked on you           (Notification hook: permission/elicitation)
 #   busy     working                  (UserPromptSubmit hook)
 #   idle     turn finished            (Stop hook)
 #

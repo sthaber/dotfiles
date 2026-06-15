@@ -5,6 +5,13 @@
   "hooks": {
     "Notification": [
       {
+        "matcher": "permission_prompt",
+        "hooks": [
+          { "type": "command", "command": "bash /home/steven/.claude/claude-tmux-state.sh waiting" }
+        ]
+      },
+      {
+        "matcher": "elicitation_dialog",
         "hooks": [
           { "type": "command", "command": "bash /home/steven/.claude/claude-tmux-state.sh waiting" }
         ]
