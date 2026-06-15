@@ -24,6 +24,13 @@
         ]
       }
     ],
+    "PostToolUse": [
+      {
+        "hooks": [
+          { "type": "command", "command": "bash /home/steven/.claude/claude-tmux-state.sh busy" }
+        ]
+      }
+    ],
     "Stop": [
       {
         "hooks": [
