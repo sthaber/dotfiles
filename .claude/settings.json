@@ -6,21 +6,21 @@
     "Notification": [
       {
         "hooks": [
-          { "type": "command", "command": "[ -n \"$TMUX_PANE\" ] && tmux set -w -t \"$TMUX_PANE\" @claude waiting 2>/dev/null || true" }
+          { "type": "command", "command": "bash /home/steven/.claude/claude-tmux-state.sh waiting" }
         ]
       }
     ],
     "UserPromptSubmit": [
       {
         "hooks": [
-          { "type": "command", "command": "[ -n \"$TMUX_PANE\" ] && tmux set -w -t \"$TMUX_PANE\" @claude busy 2>/dev/null || true" }
+          { "type": "command", "command": "bash /home/steven/.claude/claude-tmux-state.sh busy" }
         ]
       }
     ],
     "Stop": [
       {
         "hooks": [
-          { "type": "command", "command": "[ -n \"$TMUX_PANE\" ] || exit 0; n=$(jq -r '(.background_tasks | length) // 0' 2>/dev/null); case \"$n\" in ''|*[!0-9]*) n=0;; esac; [ \"$n\" -gt 0 ] && s=busy || s=idle; tmux set -w -t \"$TMUX_PANE\" @claude \"$s\" 2>/dev/null || true" }
+          { "type": "command", "command": "bash /home/steven/.claude/claude-tmux-state.sh idle" }
         ]
       }
     ]
