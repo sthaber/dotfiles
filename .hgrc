@@ -4,7 +4,8 @@ username = Steven Haber <steven@qumulo.com>
 
 [pager]
 #pager = less -FRX
-pager = /snap/bin/git-delta-snap.delta --no-gitconfig --pager='less -FRX' --dark --plus-style 'syntax 234' --24-bit-color=never
+#pager = /snap/bin/git-delta-snap.delta --no-gitconfig --pager='less -FRX' --dark --plus-style 'syntax 234' --24-bit-color=never
+pager = delta --no-gitconfig --pager='less -FRX' --dark --plus-style 'syntax 234' --24-bit-color=never
 quiet = True
 
 [color]
