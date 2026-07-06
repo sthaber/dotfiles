@@ -9,6 +9,16 @@ week_resets=$(echo "$input" | jq -r '.rate_limits.seven_day.resets_at // empty')
 version=$(echo "$input" | jq -r '.version // empty')
 model=$(echo "$input" | jq -r '.model.display_name // empty')
 
+# Currently logged-in tenant. Not in the statusline JSON; lives in .claude.json
+# oauthAccount, which /login rewrites on every account switch.
+config_json="${CLAUDE_CONFIG_DIR:-$HOME}/.claude.json"
+org=$(jq -r '.oauthAccount.organizationName // empty' "$config_json" 2>/dev/null)
+case "$org" in
+    "Qumulo Engineering")   tenant="QE"  ;;
+    "Qumulo Engineering 2") tenant="QE2" ;;
+    *)                      tenant="$org" ;;
+esac
+
 version_str=""
 if [ -n "$version" ]; then
     version_str=" (v${version})"
@@ -35,6 +45,9 @@ resets_str() {
 }
 
 bits=""
+if [ -n "$tenant" ]; then
+    bits="${bits} [${tenant}]"
+fi
 if [ -n "$model" ]; then
     bits="${bits} [${model}]"
 fi
