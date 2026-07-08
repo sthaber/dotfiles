@@ -14,9 +14,9 @@ model=$(echo "$input" | jq -r '.model.display_name // empty')
 config_json="${CLAUDE_CONFIG_DIR:-$HOME}/.claude.json"
 org=$(jq -r '.oauthAccount.organizationName // empty' "$config_json" 2>/dev/null)
 case "$org" in
-    "Qumulo Engineering")   tenant="QE"  ;;
-    "Qumulo Engineering 2") tenant="QE2" ;;
-    *)                      tenant="$org" ;;
+    "Qumulo Eng")  tenant="QE"  ;;
+    "Qumulo Eng2") tenant="QE2" ;;
+    *)             tenant="$org" ;;
 esac
 
 version_str=""
@@ -24,7 +24,7 @@ if [ -n "$version" ]; then
     version_str=" (v${version})"
 fi
 
-# Render " resets XhYm" / " resets Ym" for a resets_at epoch, empty if past/unset.
+# Render " XhYm" / " Ym" for a resets_at epoch, empty if past/unset.
 resets_str() {
     local resets_at="$1"
     if [ -z "$resets_at" ]; then
@@ -36,11 +36,11 @@ resets_str() {
     fi
     local mins_left=$(( secs_left / 60 ))
     if [ "$mins_left" -ge 1440 ]; then
-        printf ' resets %dd%dh' "$(( mins_left / 1440 ))" "$(( mins_left % 1440 / 60 ))"
+        printf ' %dd%dh' "$(( mins_left / 1440 ))" "$(( mins_left % 1440 / 60 ))"
     elif [ "$mins_left" -ge 60 ]; then
-        printf ' resets %dh%dm' "$(( mins_left / 60 ))" "$(( mins_left % 60 ))"
+        printf ' %dh%dm' "$(( mins_left / 60 ))" "$(( mins_left % 60 ))"
     else
-        printf ' resets %dm' "$mins_left"
+        printf ' %dm' "$mins_left"
     fi
 }
 

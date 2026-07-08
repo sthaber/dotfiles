@@ -51,6 +51,9 @@
 ;Associate .commit.hg.txt files with diff mode
 (add-to-list 'auto-mode-alist '("\\.commit\\.hg\\.txt\\'" . diff-mode))
 
+;Associate .j2 files with jinja2 mode
+(add-to-list 'auto-mode-alist '("\\.j2\\'" . jinja2-mode))
+
 ;Make helm always default to src
 (defun my_helm ()
   (interactive)
@@ -69,7 +72,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(markdown-preview-mode gnu-elpa-keyring-update markdown-mode rust-mode projectile helm-fuzzy-find fzf)))
+   '(jinja2-mode markdown-preview-mode gnu-elpa-keyring-update markdown-mode rust-mode projectile helm-fuzzy-find fzf)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
