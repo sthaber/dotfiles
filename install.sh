@@ -16,7 +16,7 @@ done
 
 crontab ~/.crontab
 
-sudo apt -y install emacs zile mosh
+sudo apt -y install emacs zile mosh nfs-common
 
 # ---------------------------------------------------------------------------
 # System bootstrap: root-owned state that does not live in $HOME and so does

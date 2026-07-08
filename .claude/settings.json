@@ -1,40 +1,59 @@
 {
+  "env": {
+    "CLAUDE_CODE_AUTO_CONNECT_IDE": "false"
+  },
   "permissions": {
     "defaultMode": "auto"
   },
+  "model": "claude-fable-5[1m]",
   "hooks": {
     "Notification": [
       {
         "matcher": "permission_prompt",
         "hooks": [
-          { "type": "command", "command": "bash /home/steven/.claude/claude-tmux-state.sh waiting" }
+          {
+            "type": "command",
+            "command": "bash /home/steven/.claude/claude-tmux-state.sh waiting"
+          }
         ]
       },
       {
         "matcher": "elicitation_dialog",
         "hooks": [
-          { "type": "command", "command": "bash /home/steven/.claude/claude-tmux-state.sh waiting" }
+          {
+            "type": "command",
+            "command": "bash /home/steven/.claude/claude-tmux-state.sh waiting"
+          }
         ]
       }
     ],
     "UserPromptSubmit": [
       {
         "hooks": [
-          { "type": "command", "command": "bash /home/steven/.claude/claude-tmux-state.sh busy" }
+          {
+            "type": "command",
+            "command": "bash /home/steven/.claude/claude-tmux-state.sh busy"
+          }
         ]
       }
     ],
     "PostToolUse": [
       {
         "hooks": [
-          { "type": "command", "command": "bash /home/steven/.claude/claude-tmux-state.sh busy" }
+          {
+            "type": "command",
+            "command": "bash /home/steven/.claude/claude-tmux-state.sh busy"
+          }
         ]
       }
     ],
     "Stop": [
       {
         "hooks": [
-          { "type": "command", "command": "bash /home/steven/.claude/claude-tmux-state.sh idle" }
+          {
+            "type": "command",
+            "command": "bash /home/steven/.claude/claude-tmux-state.sh idle"
+          }
         ]
       }
     ]
@@ -45,10 +64,12 @@
   },
   "enabledPlugins": {},
   "alwaysThinkingEnabled": true,
+  "effortLevel": "high",
   "tui": "default",
   "autoMemoryDirectory": "~/.claude/shared-memory",
   "skipDangerousModePermissionPrompt": true,
   "skipWorkflowUsageWarning": true,
+  "theme": "dark",
   "remoteControlAtStartup": true,
   "inputNeededNotifEnabled": true,
   "agentPushNotifEnabled": true,

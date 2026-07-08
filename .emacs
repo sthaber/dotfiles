@@ -27,6 +27,12 @@
 ;Backup of files works with hardlinks
 (setq backup-by-copying-when-linked t)
 
+;Native-comp must link with the system ld. The Qumulo toolchain (first on
+;PATH) ships binutils 2.30, whose ld can't load gcc 13's LTO plugin against
+;24.04 glibc (no GLIBC_2.33) and chokes on its GNU property markers. -B makes
+;the gcc driver find /usr/bin/ld first, scoped to emacs without touching PATH.
+(setq native-comp-driver-options '("-B/usr/bin/"))
+
 ;Don't leave garbage everywhere
 (setq make-backup-files nil) ; stop creating backup~ files
 (setq auto-save-default nil) ; stop creating #autosave# files
@@ -63,7 +69,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(gnu-elpa-keyring-update markdown-mode rust-mode projectile helm-fuzzy-find fzf)))
+   '(markdown-preview-mode gnu-elpa-keyring-update markdown-mode rust-mode projectile helm-fuzzy-find fzf)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
