@@ -36,6 +36,7 @@
     "workbench.editor.wrapTabs": true,
 
     // Color theme
+    "workbench.colorTheme": "Default Dark Modern",
     "workbench.colorCustomizations": {
         "[Default Dark Modern]": {
             "editor.background": "#000000",
