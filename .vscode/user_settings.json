@@ -64,10 +64,8 @@
     "diffEditor.ignoreTrimWhitespace": true,
 
     // Claude Code
-    "claudeCode.preferredLocation": "panel",
+    "claudeCode.preferredLocation": "sidebar",
     "claudeCode.initialPermissionMode": "acceptEdits",
 
     // Auto below here:
-    "workbench.colorTheme": "Default Dark Modern",
-    "editor.accessibilitySupport": "off",
 }

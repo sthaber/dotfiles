@@ -30,6 +30,22 @@
         "when": "editorTextFocus"
     },
     {
+        "key": "shift+alt+]",
+        "command": "workbench.action.nextEditorInGroup"
+    },
+    {
+        "key": "cmd+k cmd+pagedown",
+        "command": "-workbench.action.nextEditorInGroup"
+    },
+    {
+        "key": "shift+alt+[",
+        "command": "workbench.action.previousEditorInGroup"
+    },
+    {
+        "key": "cmd+k cmd+pageup",
+        "command": "-workbench.action.previousEditorInGroup"
+    },
+    {
         "key": "ctrl+shift+r",
         "command": "workbench.action.showAllSymbols"
     },
@@ -271,16 +287,6 @@
         "key": "shift+alt+f",
         "command": "-editor.action.formatDocument.none",
         "when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorReadonly"
-    },
-    {
-        "key": "ctrl+x ctrl+a",
-        "command": "workbench.action.toggleAuxiliaryBar",
-        "when": "!isAuxiliaryWindowFocusedContext"
-    },
-    {
-        "key": "cmd+alt+b",
-        "command": "-workbench.action.toggleAuxiliaryBar",
-        "when": "!isAuxiliaryWindowFocusedContext"
     },
     {
         "key": "ctrl+shift+f",

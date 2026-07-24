@@ -111,16 +111,6 @@
         "when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorReadonly"
     },
     {
-        "key": "ctrl+x ctrl+a",
-        "command": "workbench.action.toggleAuxiliaryBar",
-        "when": "!isAuxiliaryWindowFocusedContext"
-    },
-    {
-        "key": "ctrl+alt+b",
-        "command": "-workbench.action.toggleAuxiliaryBar",
-        "when": "!isAuxiliaryWindowFocusedContext"
-    },
-    {
         "key": "ctrl+shift+f",
         "command": "extension.searchUnderCursor"
     },
