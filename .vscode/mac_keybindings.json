@@ -74,6 +74,26 @@
         "command": "-workbench.action.showCommands"
     },
     {
+        "key": "ctrl+n",
+        "command": "workbench.action.quickOpenSelectNext",
+        "when": "inQuickOpen"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "-workbench.action.quickOpenSelectNext",
+        "when": "false"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "workbench.action.quickOpenSelectPrevious",
+        "when": "inQuickOpen"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "-workbench.action.quickOpenSelectPrevious",
+        "when": "false"
+    },
+    {
         "key": "ctrl+shift+g",
         "command": "workbench.action.findInFiles"
     },
@@ -148,16 +168,6 @@
     //     "key": "f4",
     //     "command": "-togglehs.toggleHS"
     // },
-    {
-        "key": "cmd+k i",
-        "command": "-inlineChat.start",
-        "when": "editorFocus && inlineChatHasProvider && !editorReadonly"
-    },
-    {
-        "key": "cmd+i",
-        "command": "-inlineChat.start",
-        "when": "editorFocus && inlineChatHasProvider && !editorReadonly"
-    },
     {
         "key": "shift+cmd+[",
         "command": "-emacs-mcx.backwardParagraph",
@@ -263,27 +273,14 @@
         "when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorReadonly"
     },
     {
-        "key": "ctrl+x ctrl+i",
-        "command": "claude-vscode.insertAtMention",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "alt+k alt+k",
-        "command": "-claude-vscode.insertAtMention",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+x ctrl+u",
-        "command": "claude-vscode.newConversation"
-    },
-    {
-        "key": "ctrl+x ctrl+u",
-        "command": "-emacs-mcx.transformToUppercase",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
         "key": "ctrl+x ctrl+a",
-        "command": "claude-vscode.focus"
+        "command": "workbench.action.toggleAuxiliaryBar",
+        "when": "!isAuxiliaryWindowFocusedContext"
+    },
+    {
+        "key": "cmd+alt+b",
+        "command": "-workbench.action.toggleAuxiliaryBar",
+        "when": "!isAuxiliaryWindowFocusedContext"
     },
     {
         "key": "ctrl+shift+f",
@@ -592,6 +589,12 @@
         "when": "terminalFocus"
     },
     {
+        "key": "shift+enter",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": {"text": "\u001b\r"},
+        "when": "terminalFocus"
+    },
+    {
         "key": "ctrl+shift+v",
         "command": "editor.action.clipboardPasteAction"
     },
@@ -606,14 +609,6 @@
     {
         "key": "cmd+c",
         "command": "-editor.action.clipboardCopyAction"
-    },
-    {
-        "key": "ctrl+shift+y",
-        "command": "claude-vscode.acceptProposedDiff"
-    },
-    {
-        "key": "ctrl+shift+u",
-        "command": "claude-vscode.rejectProposedDiff"
     },
     {
         "key": "cmd+o",
@@ -634,9 +629,5 @@
         "key": "alt+i",
         "command": "-qumuloC.openAffiliatedCFiles",
         "when": "editorTextFocus && resourceLangId == 'c'"
-    },
-    {
-        "key": "ctrl+c ctrl+c",
-        "command": "claude-vscode.sidebar.open"
     },
 ]
