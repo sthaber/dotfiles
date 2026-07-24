@@ -1,10 +1,9 @@
 {
-  "agentPushNotifEnabled": true,
-  "alwaysThinkingEnabled": true,
-  "autoMemoryDirectory": "~/.claude/shared-memory",
-  "enabledPlugins": {},
   "env": {
     "CLAUDE_CODE_AUTO_CONNECT_IDE": "false"
+  },
+  "permissions": {
+    "defaultMode": "auto"
   },
   "hooks": {
     "Notification": [
@@ -58,19 +57,20 @@
       }
     ]
   },
-  "inputNeededNotifEnabled": true,
-  "permissions": {
-    "defaultMode": "auto"
+  "statusLine": {
+    "type": "command",
+    "command": "/home/steven/.local/bin/cc-accounts statusline-tap"
   },
-  "remoteControlAtStartup": true,
-  "skipAutoPermissionPrompt": true,
+  "enabledPlugins": {},
+  "alwaysThinkingEnabled": true,
+  "tui": "default",
+  "autoMemoryDirectory": "~/.claude/shared-memory",
   "skipDangerousModePermissionPrompt": true,
   "skipWorkflowUsageWarning": true,
-  "statusLine": {
-    "command": "/home/steven/.local/bin/cc-accounts statusline-tap",
-    "type": "command"
-  },
   "theme": "dark",
-  "tui": "default",
+  "remoteControlAtStartup": true,
+  "inputNeededNotifEnabled": true,
+  "agentPushNotifEnabled": true,
+  "skipAutoPermissionPrompt": true,
   "voiceEnabled": true
 }
