@@ -13,9 +13,11 @@ txtblu='\e[1;34m' # Blue
 txtrst='\e[0m'    # Text Reset
 export PS1="\[$txtblu\][coder \t]\[$txtrst\]\$ "
 
-# Manually force AI terminals to load the VSCode shell integration goop.
+# Manually force AI terminals to load the VSCode shell integration goop. Cursor also reports
+# itself as vscode, so use whichever CLI is on the PATH.
 if [[ "$TERM_PROGRAM" == "vscode" ]]; then
-    . "$(cursor --locate-shell-integration-path bash)"
+    editor_cli=$(command -v code || command -v cursor)
+    [ -n "$editor_cli" ] && . "$("$editor_cli" --locate-shell-integration-path bash)"
 fi
 
 # Build

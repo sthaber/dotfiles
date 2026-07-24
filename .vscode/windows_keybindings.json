@@ -112,39 +112,29 @@
     },
     {
         "key": "ctrl+x ctrl+a",
-        "command": "composer.startComposerPrompt"
-    },
-    {
-        "key": "ctrl+i",
-        "command": "-composer.startComposerPrompt"
-    },
-    {
-        "key": "ctrl+shift+k",
-        "command": "-aipopup.action.modal.generate",
-        "when": "editorFocus && !composerBarIsVisible"
+        "command": "claude-vscode.focus"
     },
     {
         "key": "ctrl+x ctrl+i",
-        "command": "aipopup.action.modal.generate",
-        "when": "editorFocus && !composerBarIsVisible"
+        "command": "claude-vscode.insertAtMention",
+        "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+k",
-        "command": "-aipopup.action.modal.generate",
-        "when": "editorFocus && !composerBarIsVisible"
-    },
-    {
-        "key": "ctrl+k",
-        "command": "-cursorai.action.generateInTerminal",
-        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported || terminalHasBeenCreated && terminalPromptBarVisible || terminalProcessSupported && terminalPromptBarVisible"
+        "key": "alt+k alt+k",
+        "command": "-claude-vscode.insertAtMention",
+        "when": "editorTextFocus"
     },
     {
         "key": "ctrl+x ctrl+u",
-        "command": "aichat.newchataction"
+        "command": "claude-vscode.newConversation"
     },
     {
-        "key": "ctrl+l",
-        "command": "-aichat.newchataction"
+        "key": "ctrl+shift+y",
+        "command": "claude-vscode.acceptProposedDiff"
+    },
+    {
+        "key": "ctrl+shift+u",
+        "command": "claude-vscode.rejectProposedDiff"
     },
     {
         "key": "ctrl+shift+f",

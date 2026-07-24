@@ -63,18 +63,8 @@
     "emacs-mcx.useMetaPrefixMacCmd": true,
     "diffEditor.ignoreTrimWhitespace": true,
 
-    // Cursor
-    "cursor.cpp.disabledLanguages": [
-        "scminput"
-    ],
-    "cursor.composer.usageSummaryDisplay": "always",
-    "cursor.composer.shouldChimeAfterChatFinishes": true,
-    "cursor.cpp.enablePartialAccepts": true,
-    "cursor.composer.shouldAutoAcceptDiffs": false,
-
     // Claude Code
     "claudeCode.preferredLocation": "panel",
-    "claudeCode.selectedModel": "default",
     "claudeCode.initialPermissionMode": "acceptEdits",
 
     // Auto below here:

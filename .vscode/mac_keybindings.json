@@ -263,27 +263,18 @@
         "when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorReadonly"
     },
     {
-        "key": "shift+cmd+k",
-        "command": "-aipopup.action.modal.generate",
-        "when": "editorFocus && !composerBarIsVisible"
-    },
-    {
         "key": "ctrl+x ctrl+i",
-        "command": "aipopup.action.modal.generate",
-        "when": "editorFocus && !composerBarIsVisible"
+        "command": "claude-vscode.insertAtMention",
+        "when": "editorTextFocus"
     },
     {
-        "key": "cmd+k",
-        "command": "-aipopup.action.modal.generate",
-        "when": "editorFocus && !composerBarIsVisible"
+        "key": "alt+k alt+k",
+        "command": "-claude-vscode.insertAtMention",
+        "when": "editorTextFocus"
     },
     {
         "key": "ctrl+x ctrl+u",
-        "command": "aichat.newchataction"
-    },
-    {
-        "key": "cmd+l",
-        "command": "-aichat.newchataction"
+        "command": "claude-vscode.newConversation"
     },
     {
         "key": "ctrl+x ctrl+u",
@@ -292,11 +283,7 @@
     },
     {
         "key": "ctrl+x ctrl+a",
-        "command": "composer.startComposerPrompt"
-    },
-    {
-        "key": "cmd+i",
-        "command": "-composer.startComposerPrompt"
+        "command": "claude-vscode.focus"
     },
     {
         "key": "ctrl+shift+f",
@@ -622,43 +609,11 @@
     },
     {
         "key": "ctrl+shift+y",
-        "command": "editor.action.inlineDiffs.acceptPartialEdit",
-        "when": "editorHasPromptBar && editorPromptBarFocused"
-    },
-    {
-        "key": "cmd+y",
-        "command": "-editor.action.inlineDiffs.acceptPartialEdit",
-        "when": "editorHasPromptBar && editorPromptBarFocused"
-    },
-    {
-        "key": "ctrl+shift+y",
-        "command": "editor.action.inlineDiffs.acceptPartialEdit",
-        "when": "editorTextFocus && @inlineDiffs.acceptPartialEdit.isActiveEditorWithDiffs"
-    },
-    {
-        "key": "cmd+y",
-        "command": "-editor.action.inlineDiffs.acceptPartialEdit",
-        "when": "editorTextFocus && @inlineDiffs.acceptPartialEdit.isActiveEditorWithDiffs"
+        "command": "claude-vscode.acceptProposedDiff"
     },
     {
         "key": "ctrl+shift+u",
-        "command": "editor.action.inlineDiffs.rejectPartialEdit",
-        "when": "editorHasPromptBar && editorPromptBarFocused"
-    },
-    {
-        "key": "cmd+n",
-        "command": "-editor.action.inlineDiffs.rejectPartialEdit",
-        "when": "editorHasPromptBar && editorPromptBarFocused"
-    },
-    {
-        "key": "ctrl+shift+u",
-        "command": "editor.action.inlineDiffs.rejectPartialEdit",
-        "when": "editorTextFocus && @inlineDiffs.rejectPartialEdit.isActiveEditorWithDiffs"
-    },
-    {
-        "key": "cmd+n",
-        "command": "-editor.action.inlineDiffs.rejectPartialEdit",
-        "when": "editorTextFocus && @inlineDiffs.rejectPartialEdit.isActiveEditorWithDiffs"
+        "command": "claude-vscode.rejectProposedDiff"
     },
     {
         "key": "cmd+o",
